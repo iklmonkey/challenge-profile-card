@@ -1,0 +1,189 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: hsl(185, 75%, 39%);
+    background-position: center;
+}
+
+/* 
+THe body::before {} transforms the background element without 
+affecting anything else in the container. The 
+*/
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -53%;
+    left: -53%;
+    z-index: -1;
+    background: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg') 0 0 repeat;
+    transform: rotate(7deg);
+}
+
+.card-profile {
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.profile-upper {
+    background-image: url('./images/bg-pattern-card.svg');
+    background-size: cover;
+    height: 140px;
+    width: 325px;
+    border-radius: 15px 15px 0px 0px;
+    background-position: center;
+}
+
+.image-victor {
+    height: 110px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    transform: translate(96%, 78%);
+}
+
+.profile-details {
+    border-bottom: 1px solid hsla(0, 0%, 59%, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 145px;
+}
+
+.profile-details>h2 {
+    font-size: 18px;
+    color: hsl(229, 23%, 23%);
+    letter-spacing: 0.5px;
+    margin-top: 50px;
+}
+
+.profile-details .age {
+    color: hsl(0, 0%, 59%);
+    font-weight: normal;
+    padding-left: 8px;
+}
+
+.london {
+    font-size: 14px;
+    font-weight: normal;
+    color: hsl(0, 0%, 59%);
+}
+
+.profile-influence {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 17px;
+    padding-right: 27px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bolder;
+    margin: auto;
+}
+
+.influence-title {
+    font-size: 10px;
+    font-weight: normal;
+    color: hsl(0, 0%, 59%);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1.5px;
+}
